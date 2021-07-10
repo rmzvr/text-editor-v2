@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 23.1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/solid.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__main-section">
+            <button class="header__button button button_border-radius_full button_disabled" id="editButton"
+                type="button" disabled value="edit"><i class="uil uil-arrow"></i></button>
+
+            <button class="button button_border-radius_left" type="button" value="bold"><i
+                    class="uil uil-bold"></i></button>
+            <button class="button" type="button" value="italic"><i class="uil uil-italic"></i></button>
+            <button class="button" type="button" value="underline"><i class="uil uil-underline"></i></button>
+            <button class="header__button button button_border-radius_right" type="button" value="line-through"><i
+                    class="uil uil-text-strike-through"></i></button>
+
+            <button class="button button_border-radius_left" type="button" value="left"><i
+                    class="uil uil-align-left"></i></button>
+            <button class="button" type="button" value="center"><i class="uil uil-align-center"></i></button>
+            <button class="header__button button button_border-radius_right" type="button" value="right"><i
+                    class="uil uil-align-right"></i></button>
+
+            <button class="button font-menu button_border-radius_left" type="button" value="fontFamily"><i
+                    class="uil uil-font"></i><span class="arrow">▼</span>
+                <ul class="submenu font-menu__submenu">
+                    <li style="font-family: Arial, Helvetica, sans-serif;">Arial</li>
+                    <li style="font-family: Georgia, 'Times New Roman', Times, serif;">Georgia</li>
+                    <li style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Impact</li>
+                    <li style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Tahoma</li>
+                    <li style="font-family: 'Times New Roman', Times, serif;">Times New Roman</li>
+                    <li style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Verdana</li>
+                </ul>
+            </button>
+
+            <button class="button size-menu" type="button" value="fontSize"><i class="uil uil-text-size"></i><span
+                    class="arrow">▼</span>
+                <ul class="submenu size-menu__submenu">
+                    <li style="font-size: 12px;">12px</li>
+                    <li style="font-size: 14px;">14px</li>
+                    <li style="font-size: 16px;">16px</li>
+                    <li style="font-size: 18px;">18px</li>
+                    <li style="font-size: 20px;">20px</li>
+                    <li style="font-size: 22px;">22px</li>
+                    <li style="font-size: 25px;">25px</li>
+                    <li style="font-size: 30px;">30px</li>
+                </ul>
+            </button>
+
+
+            <button class="button" type="button" value="palette"><i class="uil uil-palette"></i></button>
+            <button class="header__button button button_border-radius_right" type="button" value="chooser"><i
+                    class="uil uil-image"></i></button>
+
+            <button class="button button_border-radius_full" id="lockButton" type="button" value="login">
+                <i class="uis uis-lock"></i>
+                <i class="uis uis-unlock"></i>
+            </button>
+        </div>
+        <div class="header__edit-section hidden">
+            <button class="button button_border-radius_left" type="button" value="save"><i
+                    class="uil uil-save"></i></button>
+            <button class="button" type="button" value="table"><i class="uil uil-table"></i></button>
+            <button class="button" type="button" value="ul-list"><i class="uil uil-list-ul"></i></button>
+            <button class="button button_border-radius_right" type="button" value="ol-list"><i
+                    class="uil uil-list-ol-alt"></i></i></button>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__result">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sit eos reprehenderit fugit in blanditiis.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sit eos reprehenderit fugit in blanditiis.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sit eos reprehenderit fugit in blanditiis.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sit eos reprehenderit fugit in blanditiis.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sit eos reprehenderit fugit in blanditiis.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sit eos reprehenderit fugit in blanditiis.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sit eos reprehenderit fugit in blanditiis.
+            </p>
+        </div>
+        <div class="main__edit hidden">
+            <textarea class="textarea" id="textarea" name="textArea"></textarea>
+        </div>
+    </main>
+
+    <!-- pop-up -->
+    <div class="pop-up-fade">
+        <div class="pop-up">
+            <div class="pop-up__header">
+                <h1 class="pop-up__title"></h1>
+                <i class="uil uil-times"></i>
+            </div>
+            <div class="uni-picker-menu hidden">
+                <div class="uni-picker-menu__item tab-colors active-tab">Colors</div>
+                <div class="uni-picker-menu__item tab-images">Images</div>
+                <div class="uni-picker-menu__item tab-files">Files</div>
+            </div>
+            <div class="pop-up__content">
+
+                <!-- uni-picker -->
+                <div class="uni-picker">
+                    <div class="uni-picker__colors">
+                        <div class="uni-picker__colors-item" style="background-color: aqua;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: aquamarine;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: lightgreen;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: green;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #00FF3F;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #7DF9FF;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #0095B6;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #9966CC;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #B57EDC;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #CCCCFF;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #8E4585;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #EDC9AF;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #FFF700;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #FF4500;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #FF2400;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #92000A;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #F5F5DC;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #4D3333;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #08FF21;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #FFAAA1;"></div>
+                        <div class="uni-picker__colors-item" style="background-color: #B24AAA;"></div>
+                    </div>
+                    <div class="uni-picker__images hidden">
+                        <div class="uni-picker__images-item"></div>
+                        <div class="uni-picker__images-item"></div>
+                        <div class="uni-picker__images-item"></div>
+                        <div class="uni-picker__images-item"></div>
+                        <div class="uni-picker__images-item"></div>
+                        <div class="uni-picker__images-item"></div>
+                        <div class="uni-picker__images-item"></div>
+                        <div class="uni-picker__images-item"></div>
+                        <div class="uni-picker__images-item"></div>
+                    </div>
+                    <div class="uni-picker__files hidden">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" accept="image/jpeg,image/png">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- login -->
+                <div class="login hidden">
+                    <form class="login-form" name="loginForm">
+                        <input class="login-form__input" id="inputLogin" name="login" type="text" placeholder="Login here...">
+                        <input class="login-form__input" id="inputPassword" name="password" type="password" placeholder="Password here...">
+                        <div class="login-form__error"></div>
+                        <input class="login-form__button" type="submit">
+                    </form>
+                </div>
+
+                <!-- login confirm -->
+                <div class="login-confirm hidden">
+                    <button class="menu-button menu-button_color_black" type="button" value="cancel">Cancel</button>
+                    <button class="menu-button menu-button_color_red" type="button" value="signOut">Sign Out</button>
+                </div>
+
+                <!-- table-menu -->
+                <div class="table-menu">
+                    <form class="table-menu-form" name="tableMenuForm">
+                        <div class="table-menu__inner">
+                            <div class="table-menu__item">
+                                <div class="table-menu__title">Count TR:</div>
+                                <input class="table-menu__input" name="countTr" type="text" placeholder="Type here...">
+                            </div>
+                            <div class="table-menu__item">
+                                <div class="table-menu__title">Count TD:</div>
+                                <input class="table-menu__input" name="countTd" type="text" placeholder="Type here...">
+                            </div>
+                            <div class="table-menu__item">
+                                <div class="table-menu__title">Width of TD:</div>
+                                <input class="table-menu__input" name="widthTd" type="text" placeholder="Type here...">
+                            </div>
+                            <div class="table-menu__item">
+                                <div class="table-menu__title">Height of TD:</div>
+                                <input class="table-menu__input" name="heigthTd" type="text" placeholder="Type here...">
+                            </div>
+                            <div class="table-menu__item">
+                                <div class="table-menu__title">Width of border:</div>
+                                <input class="table-menu__input" name="widthBd" type="text" placeholder="Type here...">
+                            </div>
+                            <div class="table-menu__item table-menu__item_size_small">
+                                <div class="table-menu__title">Style of border:</div>
+                                <select class="table-menu__input" name="styleBd">
+                                    <option value="" disabled selected>Choose style</option>
+                                    <option value="dotted">dotted</option>
+                                    <option value="dashed">dashed</option>
+                                    <option value="solid">solid</option>
+                                    <option value="double">double</option>
+                                    <option value="groove">groove</option>
+                                    <option value="ridge">ridge</option>
+                                    <option value="inset">inset</option>
+                                    <option value="outset">outset</option>
+                                </select>
+                            </div>
+                            <div class="table-menu__item table-menu__item_size_small">
+                                <div class="table-menu__title">Color of border:</div>
+                                <select class="table-menu__input" name="colorBd">
+                                    <option value="" disabled selected>Choose color</option>
+                                    <option value="black">black</option>
+                                    <option value="red">red</option>
+                                    <option value="green">green</option>
+                                    <option value="blue">blue</option>
+                                    <option value="yellow">yellow</option>
+                                    <option value="white">white</option>
+                                    <option value="gray">gray</option>
+                                    <option value="pink">pink</option>
+                                </select>
+                            </div>
+                            <div class="table-menu__error">
+                                invalid value
+                            </div>
+                            <button class="menu-button menu-button_color_red" value="resetTable"
+                                type="button">Reset</button>
+                            <button class="menu-button menu-button_color_green" value="crtTable" type="button">Create
+                                table</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="list-menu">
+                    <form class="list-menu-form" name="listMenuForm">
+                        <div class="list-menu__inner">
+                            <div class="list-menu__item">
+                                <div class="list-menu__title">Count li item:</div>
+                                <input class="list-menu__input list-menu__input_ul list-menu__input_ol" id="countLi" name="countLi" type="text" placeholder="Type here...">
+                            </div>
+                            <div class="list-menu__item">
+                                <div class="list-menu__title">Type mark of list:</div>
+                                <select class="list-menu__input list-menu__input_ul" id="typeUl" name="typeUl">
+                                    <option value="" disabled selected>Choose UL type mark</option>
+                                    <option value="circle">circle</option>
+                                    <option value="disc">disc</option>
+                                    <option value="square">square</option>
+                                </select>
+                                <select class="list-menu__input list-menu__input_ol" id="typeOl" name="typeOl">
+                                    <option value="" disabled selected>Choose OL type mark</option>
+                                    <option value="decimal">1</option>
+                                    <option value="lower-alpha
+                                    ">a</option>
+                                    <option value="upper-alpha
+                                    ">A</option>
+                                    <option value="lower-roman
+                                    ">i</option>
+                                    <option value="upper-roman
+                                    ">I</option>
+                                </select>
+                            </div>
+                            <div class="list-menu__error">
+                                invalid value
+                            </div>
+                            <button class="menu-button menu-button_color_red" value="resetList"
+                                type="button">Reset</button>
+                            <button class="menu-button menu-button_color_green" value="crtList" type="button">Create
+                                list</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./js/main.js"></script>
+</body>
+
+</html>
